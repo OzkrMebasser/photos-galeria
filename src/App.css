@@ -1,38 +1,211 @@
-.App {
+.contain {
+  margin-top: 0px;
+  columns: 3;
+  column-gap: 10px;
+  width: 85%;
+  margin: 2px auto;
+  box-sizing: border-box;
+  border-radius: 20px;
+
+  background-color: rgb(0, 0, 0);
+}
+
+.contain img {
+  width: 100%;
+  height: 80%;;
+  margin: 0;
+  padding: 8px;
+  box-shadow: 0 4px 5px 0 rgba(49, 48, 48, 0.884),
+    0 6px 20px 0 rgba(168, 167, 167, 0.733);
+  border-radius: 8px;
+  opacity: 70%;
+  box-sizing: border-box;
+  filter: blur(1.8px);
+  border: 2px solid whitesmoke;
+  border-radius: 20px;
+}
+.contain .text {
+  font-size: 1.2rem;
+  color: #DDD;
+  top: 0;
+
+  text-align: justify;
+}
+.contain img:hover {
+  opacity: 100%;
+  filter: blur(0px);
+}
+
+.center {
+  align-items: center;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+/* input {
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  text-align: center;
+  width: 60%;
+} */
+
+input {
+  width: 40%;
+  font-size: 1rem;
+  padding: 11px 20px;
+  margin: auto;
+  box-sizing: border-box;
+  margin-left: 25%;
+  opacity: 85%;
+  border-radius: 8px;
+  color: rgb(0, 0, 0);
+  border: 3px solid rgb(0, 0, 0);
 }
 
-.App-link {
-  color: #61dafb;
+@media (max-width: 768px) {
+  input {
+    font-size: 0.4rem;
+    width: 150px;
+  }
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+button {
+  width: 10%;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 12px 20px;
+  box-sizing: border-box;
+  border-radius: 8px;
+  background-size: cover;
+  background-color: black;
+  background-clip: text;
+  -webkit-background-clip: text;
+  border-style: inset;
+}
+
+.button {
+  border: 2px solid rgb(0, 0, 0);
+  color: transparent;
+  cursor: pointer;
+  background-color: black;
+  display: inline-block;
+  font-family: Arial;
+  text-align: center;
+  text-decoration: none;
+  -webkit-animation: glowing 1500ms infinite;
+  -moz-animation: glowing 1500ms infinite;
+  -o-animation: glowing 1500ms infinite;
+  animation: glowing 1500ms infinite;
+}
+@-webkit-keyframes glowing {
+  0% {
+    background-color: #dddbdb;
+    -webkit-box-shadow: 0 0 3px #dddbdb;
   }
-  to {
-    transform: rotate(360deg);
+  50% {
+    background-color: #ffffff;
+    -webkit-box-shadow: 0 0 40px #ffffff;
   }
+  100% {
+    background-color: #dddbdb;
+    -webkit-box-shadow: 0 0 3px #dddbdb;
+  }
+}
+
+@-moz-keyframes glowing {
+  0% {
+    background-color: #dddbdb;
+    -webkit-box-shadow: 0 0 3px #dddbdb;
+  }
+  50% {
+    background-color: #ffffff;
+    -webkit-box-shadow: 0 0 40px #ffffff;
+  }
+  100% {
+    background-color: #dddbdb;
+    -webkit-box-shadow: 0 0 3px #dddbdb;
+  }
+}
+
+@-o-keyframes glowing {
+  0% {
+    background-color: #dddbdb;
+    -webkit-box-shadow: 0 0 3px #dddbdb;
+  }
+  50% {
+    background-color: #ffffff;
+    -webkit-box-shadow: 0 0 40px #ffffff;
+  }
+  100% {
+    background-color: #dddbdb;
+    -webkit-box-shadow: 0 0 3px #dddbdb;
+  }
+}
+
+@keyframes glowing {
+  0% {
+    background-color: #dddbdb;
+    -webkit-box-shadow: 0 0 3px #dddbdb;
+  }
+  50% {
+    background-color: #ffffff;
+    -webkit-box-shadow: 0 0 40px #ffffff;
+  }
+  100% {
+    background-color: #dddbdb;
+    -webkit-box-shadow: 0 0 3px #dddbdb;
+  }
+}
+
+@media (max-width: 768px) {
+  button {
+    font-size: 1rem;
+    width: 6rem;
+    font-weight: 600;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border-radius: 8px;
+  }
+}
+
+.container-glass,
+.container-glass::before,
+.container-glass::after {
+  border-radius: 7px;
+  background-color: rgba(255, 255, 255, .2);
+  backdrop-filter: blur(5px);
+  box-shadow: 0px 0px 22px rgba(0, 0, 0, 0.08);
+}
+.container-glass {
+  position: relative;
+  padding: 2rem 1.5rem;
+  width: 80%;
+  max-width: 280px;
+}
+.container-glass::before,
+.container-glass::after {
+  content: '';
+  position: absolute;
+}
+.container-glass::before {
+  height: 80px;
+  width: 80px;
+  top: -10px;
+  left: -40px;
+  z-index: -1;
+}
+.container-glass::after {
+  height: 40px;
+  width: 40px;
+  bottom: 20px;
+  right: -10px;
+  z-index: 2;
+}
+
+.container-glass .img {
+  width: 100%;
+  height:100%;
+  /* border-radius: 7px; */
+}
+
+.container-glass .text {
+ 
 }
